@@ -1,0 +1,42 @@
+<!--miniprogram/pages/pay/pay.wxml-->
+<view class="pay">
+  <!-- 选择收货地址 -->
+  <view class="chosen-address">
+    <view class="address-container">
+      <van-row>
+        <van-col span="3">
+          <van-icon class="location-icon" name="location" />
+        </van-col>
+        <van-col span="19">
+          <view class="address-content">
+            <view class="receiver">{{chosenAddress.receiver}}</view>
+            <view class="phone">{{chosenAddress.phone}}</view>
+            <view class="adress-detail">
+              {{chosenAddress.region[0].name}} {{chosenAddress.region[1].name}} {{chosenAddress.region[2].name}} {{chosenAddress.address}}</view>
+          </view>
+        </van-col>
+        <van-col span="2">
+          <view class="address-operation">
+            <van-icon class="chosen-button" name="arrow" bind:tap="onChosenButtonClick" />
+          </view>
+        </van-col>
+      </van-row>
+    </view>
+  </view>
+  <!-- 支付商品列表 -->
+  <view class="product">
+    <block wx:for="{{ payList }}" wx:key="index">
+      <van-card num="{{item.number}}" price="{{item.productInfo.price}}" title="{{item.productInfo.name}}" thumb="{{item.productInfo.miniImg}}" />
+    </block>
+  </view>
+  <view class="bottom-bar">
+    <view class="total-price">原价:{{ totalPrice }}</view>
+    <view class="payment-fee">合计:</view>
+    <view class="price">{{ paymentFee }}</view>
+    <view class="button-container">
+      <button class="summit-button" bindtap="onSummitOrder">提交订单</button>
+    </view>
+  </view>
+  <van-toast id="van-toast" />
+  <van-dialog id="van-dialog" />
+</view>

@@ -1,0 +1,27 @@
+<!--miniprogram/pages/product/product.wxml-->
+<view class="product">
+  <!-- 商品大图 -->
+  <view class="product-img-container">
+    <image src="{{product.bigImg}}" mode="aspectFit"></image>
+  </view>
+  <!-- 商品详情 -->
+  <view class="product-detail">
+    <view class="price">{{product.price}}</view>
+    <view class="product-stepper">
+      <van-stepper name="number" value="{{ productNumber }}" bind:change="onNumberChange" integer />
+    </view>
+    <view class="name">{{product.name}}</view>
+    <view class="detail">{{product.detail}}</view>
+  </view>
+  <!-- 底部工具栏 -->
+  <view class="product-nav">
+    <van-goods-action>
+      <van-goods-action-icon icon="shop-o" text="商城" bind:click="onClickStoreIcon" />
+      <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onClickCartIcon" info="{{ cartNumber }}" />
+      <van-goods-action-button color="#ADD8E6" text="加入购物车" type="warning" bind:click="onClickAddToCartButton" />
+      <van-goods-action-button color="#f67879" text="立即购买" bind:click="onClickBuyButton" />
+    </van-goods-action>
+  </view>
+   <!-- 警示弹窗 -->
+  <van-toast id="van-toast" />
+</view>

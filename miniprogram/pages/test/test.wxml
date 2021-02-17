@@ -1,0 +1,33 @@
+<!--miniprogram/pages/test/test.wxml-->
+<view class="container">
+
+  <!-- 左瀑布流 -->
+  <view id="left" class="fall-left">
+    <block wx:for="{{leftList}}" wx:key="id">
+      <view class="cards" style="width: {{ itemWidth }}px">
+        <navigator url="../product/product?id={{item.id}}">
+          <image src="{{item.miniImg}}" mode='widthFix' lazy-load></image>
+          <view class="text">
+            <view class="name">{{item.name}}</view>
+            <view class="price">{{item.price}}</view>
+          </view>
+        </navigator>
+      </view>
+    </block>
+  </view>
+  <!-- 右瀑布流 -->
+  <view id="right" class="fall-right">
+    <block wx:for="{{rightList}}" wx:key="id">
+      <view class="cards" style="width: {{ itemWidth }}px">
+        <navigator url="../product/product?id={{item.id}}">
+          <image src="{{item.miniImg}}" mode='widthFix' lazy-load></image>
+          <view class="text">
+            <view class="name">{{item.name}}</view>
+            <view class="price">{{item.price}}</view>
+          </view>
+        </navigator>
+      </view>
+    </block>
+  </view>
+
+</view>

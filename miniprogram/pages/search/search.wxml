@@ -1,0 +1,21 @@
+<view class="search">
+  <!-- 顶部搜索栏 -->
+  <view class="search-bar">
+    <van-search value="{{ keyword }}" shape="round" show-action clearable="true" placeholder="请输入搜索关键词" bind:search="onSearchClick" use-action-slot>
+    </van-search>
+  </view>
+  <!-- 搜索结果 -->
+  <view class="search-result">
+    <block wx:if="{{ isEmptyResult&&isSearched }}">
+      <view class="empty-result">
+        <image src="{{backgroundUrl}}" mode="aspectFit" class="empty-result-image"></image>
+        <view class="empty-result-desc">
+          <text>非常抱歉，库存中没有你想要的商品</text>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <water-fall id="waterFall"></water-fall>
+    </block>
+  </view>
+</view>

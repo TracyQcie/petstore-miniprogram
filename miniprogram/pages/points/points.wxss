@@ -1,0 +1,21 @@
+/* miniprogram/pages/points/points.wxss */
+
+.points-details {
+  font-size: 35rpx;
+  color: gray;
+  margin-left: 5%;
+}
+
+.potins-sync-button .van-button--large {
+  width: 100%;
+  height: 50px;
+}
+
+.points-detail-background {
+  width: 80%;
+  height: 500rpx;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+}

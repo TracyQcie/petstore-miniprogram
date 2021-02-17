@@ -1,0 +1,19 @@
+/* miniprogram/pages/complain/complain.wxss */
+
+.van-cell__title, .van-cell__value {
+  -webkit-flex: 1;
+  flex: 1;
+  color: grey;
+}
+
+.complain-container {
+  border-radius: 20rpx;
+  margin: 10rpx 20rpx 20rpx 20rpx;
+  padding: 0 20rpx 20rpx 20rpx;
+  box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.205);
+}
+
+.complain-text {
+  color: rgb(95, 95, 95);
+  margin: 40rpx;
+}

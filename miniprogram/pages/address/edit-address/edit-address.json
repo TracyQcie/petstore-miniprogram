@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-area": "@vant/weapp/area",
+    "van-popup": "@vant/weapp/popup",
+    "van-field": "@vant/weapp/field",
+    "van-cell": "@vant/weapp/cell",
+    "van-cell-group": "@vant/weapp/cell-group",
+    "van-button": "@vant/weapp/button",
+    "van-switch": "@vant/weapp/switch"
+  },
+  "navigationBarTitleText": "编辑收件地址"
+}

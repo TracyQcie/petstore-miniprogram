@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon"
+  },
+  "navigationBarTitleText": "社区"
+}

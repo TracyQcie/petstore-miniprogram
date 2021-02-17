@@ -1,0 +1,13 @@
+<!--miniprogram/pages/complain/complain.wxml-->
+<view class="complain">
+  <block wx:for="{{complainList}}" wx:key="index">
+    <view class="complain-container">
+      <van-panel title="{{ item.date }}" status="{{ item.status.label }}">
+      <van-divider contentPosition="left">申诉理由</van-divider>
+        <view class="complain-text">{{item.issue}}</view>
+        <van-divider contentPosition="left">管理员批复</van-divider>
+        <view class="complain-text">{{item.response == ''?'无':item.response}}</view>
+      </van-panel>
+    </view>
+  </block>
+</view> 

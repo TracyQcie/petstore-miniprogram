@@ -1,0 +1,26 @@
+.cancel-btn {
+  border-radius: 5rpx;
+  color: #fff;
+  background-color: #add8e6;
+}
+
+.search-result image {
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.empty-result {
+  margin-top: 150rpx;
+}
+
+.empty-result .empty-result-image {
+  width: 100%;
+}
+
+.empty-result-desc {
+  color: rgb(73, 135, 163);
+  font-weight: 600;
+  font-size: 25rpx;
+  text-align: center;
+}

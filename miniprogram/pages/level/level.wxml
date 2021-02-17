@@ -1,0 +1,70 @@
+<view class="level">
+  <!-- 用户当前等级 -->
+  <view class="my-level">
+    <!-- 用户头像与升级进度 -->
+    <van-row>
+      <van-col span="8" offset="4">
+        <view class="user-icon">
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+      </van-col>
+      <van-col span="10">
+        <view class="user-progress">
+          <van-circle layer-color="#eee" value="{{growthValueProgress}}" size="80" stroke-width="5" color="{{ gradientColor }}" text="{{growthValueProgress}}%" />
+        </view>
+      </van-col>
+    </van-row>
+    <van-divider hairline />
+    <!-- 用户升级详情 -->
+    <view class="user-upgrade-detail">
+      <view>
+        <open-data type="userNickName"></open-data> 您当前成长值为
+        <text style="color:gold;">{{myInfo.growthValue}}</text>
+      </view>
+      <view style="margin-top:10rpx;">等级为
+        <text class="level-color-{{myLevel.id}}">LV{{myLevel.id}}{{myLevel.title}}</text>
+      </view>
+      <view style="margin-top:10rpx;">离下一等级所需成长值为
+        <text class="level-color-{{nextLevel.id}}">{{growthValueToNextLevel}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- <van-divider hairline /> -->
+  <view class="level-list">
+    <scroll-view scroll-x="true" scroll-into-view="{{myLevel.unique}}" class="level-list-container">
+      <!-- 列表渲染 -->
+      <block wx:for="{{levels}}" wx:for-item="level" wx:key="unique">
+        <!-- 绑定用户点击事件 -->
+        <view class="level-icon" bind:tap="onClickLevelIcon" data-selected="{{level}}">
+          <!-- 当前选中的用户等级图标放大显示 -->
+          <block wx:if="{{level.id != selectedId}}">
+            <van-icon name="medal" size="50px" class="level-color-{{level.id}}" />
+          </block>
+          <block wx:if="{{level.id == selectedId}}">
+            <van-icon name="medal" size="70px" class="level-color-{{level.id}}" />
+          </block>
+          <view class="level-color-{{level.id}}">LV{{level.id}}</view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <!-- 等级特权详情 -->
+  <view class="level-detial">
+    <view class="level-detail-background" style="background: url({{backgroundUrl}}) no-repeat  top/cover"></view>
+    <van-divider contentPosition="center" textColor="#FF88CF" fontSize="18">
+      <van-icon name="award-o" size="25px" />
+      <view class="devide"></view>等级头衔</van-divider>
+    <view class="level-title">{{selectedLevel.title}}</view>
+    <van-divider contentPosition="center" textColor="#88A0FF" fontSize="18">
+      <van-icon name="discount" size="25px" />
+      <view class="devide"></view>等级特权</van-divider>
+    <view class="level-bonus">购物时可享受 {{selectedLevel.bonus.descount*100}}% 的折扣
+    </view>
+    <van-divider contentPosition="center" textColor="#FF9955" fontSize="18">
+      <van-icon name="chart-trending-o" size="25px" />
+      <view class="devide"></view>成长值区间</van-divider>
+    <text>{{selectedLevel.minGrowthValue}}</text>
+    <van-icon name="arrow" />
+    <text>{{selectedLevel.maxGrowthValue}}</text>
+  </view>
+</view>

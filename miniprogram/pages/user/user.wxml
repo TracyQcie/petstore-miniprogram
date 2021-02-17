@@ -1,0 +1,36 @@
+<view class="user">
+  <!-- 用户个人资料页 -->
+  <view class="user-profile">
+    <view class='user-profile-container' style='background: url({{userAvatarUrl}}) no-repeat  top/cover'></view>
+    <view class='user-profile-mask'></view>
+    <open-data class="user-icon" type="userAvatarUrl"></open-data>
+    <open-data class="user-name" type="userNickName"></open-data>
+  </view>
+  <!-- 用户菜单栏 -->
+  <view class="user-block">
+    <!-- 用户积分等级详情 -->
+    <view class="user-detail">
+      <view class="user-points">
+        <view class="user-detail-text">{{userInfo.points}}</view>
+        <view class="user-detail-describe">积 分</view>
+      </view>
+      <view class="divide">
+      </view>
+      <view class="user-level">
+        <view class="user-detail-text">LV{{userLevel.id}}</view>
+        <view class="user-detail-describe">{{userLevel.title}}</view>
+      </view>
+    </view>
+    <!-- 用户点选区域 -->
+    <view class="user-options">
+      <van-grid square column-num="3" gutter="{{ 10 }}">
+        <van-grid-item icon="balance-list-o" link-type="navigateTo" url="/pages/orders/orders" text="订单" />
+        <van-grid-item icon="cart-o" link-type="navigateTo" url="/pages/cart/cart" text="购物车" />
+        <van-grid-item icon="location-o" url="/pages/address/my-address/my-address" text="收货地址" />
+        <van-grid-item icon="vip-card-o" url="/pages/level/level" text="等级" />
+        <van-grid-item icon="medal-o" url="/pages/points/points" text="积分" />
+        <van-grid-item icon="other-pay" url="/pages/about/about" text="关于" />
+      </van-grid>
+    </view>
+  </view>
+</view>

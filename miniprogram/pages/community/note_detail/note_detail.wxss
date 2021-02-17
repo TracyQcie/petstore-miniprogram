@@ -1,0 +1,35 @@
+/* pages/community/note_detail/note_detail.wxss */
+
+swiper-item {
+  display: flex;
+}
+
+swiper-item image {
+  margin: auto;
+}
+
+.content {
+  color: rgb(49, 49, 49);
+  font-size: 30rpx;
+}
+
+.date {
+  font-size: 28rpx;
+  color: grey;
+}
+
+.icon-likefill {
+  color: #f67879;
+  display: inline-block;
+}
+
+.icon-like {
+  display: inline-block;
+  color: grey;
+}
+
+.like-num {
+  color: grey;
+  font-size: 35rpx;
+  margin: 0rpx 15rpx 10rpx 0rpx;
+}

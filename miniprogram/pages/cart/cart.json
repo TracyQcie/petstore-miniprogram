@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "van-checkbox": "@vant/weapp/checkbox",
+    "van-checkbox-group": "@vant/weapp/checkbox-group",
+    "van-swipe-cell": "@vant/weapp/swipe-cell",
+    "van-row": "@vant/weapp/row",
+    "van-col": "@vant/weapp/col",
+    "van-stepper": "@vant/weapp/stepper",
+    "van-dialog": "@vant/weapp/dialog",
+    "van-toast": "@vant/weapp/toast"
+  },
+  "navigationBarTitleText": "购物车"
+}

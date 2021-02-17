@@ -1,0 +1,77 @@
+.nav-bar {
+  text-align: center;
+  height: 100rpx;
+}
+
+.nav-bar-btn {
+  display: inline-block;
+  margin: 24rpx 20rpx;
+  font-size: 35rpx;
+  width: 150rpx;
+}
+
+.nav-bar-btn-active {
+  display: inline-block;
+  margin: 24rpx 20rpx;
+  font-size: 35rpx;
+  width: 150rpx;
+  color: #f67879;
+  border-bottom: 5rpx solid #f67879;
+}
+
+.nav-bar-btn-icon {
+  padding: 20rpx 35rpx 0rpx 0rpx;
+  float: right;
+}
+
+.nav-bar-icon {
+  width: 100rpx;
+  display: inline-block;
+  font-size: 48rpx;
+}
+
+.note-card {
+  height: 450rpx;
+  position: relative;
+  box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.10);
+}
+
+.note-card-img {
+  margin: 0rpx 0rpx 10rpx 0rpx;
+}
+
+.note-card-content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  margin: 0 25rpx;
+  color: rgb(49, 49, 49);
+  font-size: 30rpx;
+}
+
+.note-card-footer {
+  position: relative;
+  margin: 10rpx 0rpx;
+}
+
+.date {
+  display: inline-block;
+  color: grey;
+  font-size: 28rpx;
+  margin: 10rpx 25rpx;
+}
+
+.like {
+  display: inline-block;
+  position: absolute;
+  color: grey;
+  right: 0;
+  margin: 0 30rpx 0rpx 0rpx;
+}
+
+.like-icon {
+  display: inline-block;
+  font-size: 30rpx;
+  margin: 10rpx 0rpx 0rpx 0rpx;
+}

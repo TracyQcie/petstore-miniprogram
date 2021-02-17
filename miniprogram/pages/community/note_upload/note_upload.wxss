@@ -1,0 +1,47 @@
+/* pages/community/note_upload/note_upload.wxss */
+
+.nav-bar {
+  height: 100rpx;
+  margin-top: 10rpx;
+  margin-bottom: 30rpx;
+  position: relative;
+}
+
+.cancel {
+  margin: 10rpx 20rpx;
+}
+
+.cancel-btn {
+  color: grey;
+  background-color: white;
+}
+
+.submit-btn {
+  background-color:#f67879;
+  color: white;
+}
+
+.submit {
+  position: absolute;
+  right: 0;
+  margin: 10rpx 30rpx;
+}
+
+.text-field {
+  margin: 0rpx 40rpx;
+  height: auto;
+  position: relative;
+}
+
+.upload-photo {
+  margin: 10rpx 70rpx;
+}
+
+.weui-textarea-counter {
+  color: rgba(0, 0, 0, 0.3);
+  text-align: right;
+  float: bottom;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}

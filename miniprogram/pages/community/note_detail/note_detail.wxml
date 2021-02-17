@@ -1,0 +1,44 @@
+<!-- 当获取到笔记数据后，再显示页面-->
+<view wx:if="{{inited}}" class="bg-white">
+  <!-- 笔记图片 -->
+  <view class="text-center">
+    <swiper wx:if="{{noteInfo.images.length > 0}}" style="height: 300px;" indicator-dots="true" indicator-color="#888888" indicator-active-color="#353535">
+      <block wx:for="{{noteInfo.images}}" wx:key="item.url">
+        <swiper-item class="align-center">
+          <image mode="aspectFit" src="{{item.url}}" style="width: 100%; height: {{item.height}}px;"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 笔记内容 -->
+  <view class="weui-article">
+    <view class="weui-article__section">
+      <!-- 笔记文字内容 -->
+      <view class="weui-article__p">
+        <text class="content">{{noteInfo.content}}</text>
+      </view>
+      <view class="weui-article__p margin-lr">
+        <view class="weui-flex">
+          <!-- 笔记发表时间 -->
+          <view class="weui-flex__item date">
+            {{noteInfo.date}}
+          </view>
+
+          <!-- 笔记点赞 -->
+          <view bindtap='onUpvoteClick' class="margin-right">
+            <text class="like-num">{{noteInfo.upvoteNum}}</text>
+            <view class="{{isUpvoted? 'icon-likefill':'icon-like'}} margin-right-xs">
+              <block wx:if="{{isUpvoted}}">
+                <van-icon name="like" />
+              </block>
+              <block wx:else>
+                <van-icon name="like-o" />
+              </block>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

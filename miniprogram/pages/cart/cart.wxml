@@ -1,0 +1,74 @@
+<view class="cart">
+  <!-- 购物车状态 -->
+  <view class="cart-situation">
+    <view class="total">共有
+      <text>{{ cartTotal }}</text> 件商品</view>
+    <block wx:if="{{ pay }}">
+      <view class="manage" bind:tap="onClickManage">管理</view>
+    </block>
+    <block wx:else>
+      <view class="manage" bind:tap="onClickManage">完成</view>
+    </block>
+  </view>
+  <!-- 购物车商品列表 -->
+  <view class="product-list">
+    <van-checkbox-group value="{{ checkboxResult }}" bind:change="onCheckboxChange">
+      <block wx:for="{{cart}}" wx:key="index">
+        <view class="product-container">
+          <van-row>
+            <van-col span="3">
+              <view class="check">
+                <van-checkbox checked-color="#ADD8E6" name="{{ item.id }}"></van-checkbox>
+              </view>
+            </van-col>
+            <van-col span="5">
+              <navigator url="../product/product?id={{item.id}}">
+                <image class="thumbnail" src="{{ item.productInfo.miniImg }}" mode="aspectFit"></image>
+              </navigator>
+            </van-col>
+            <van-col span="16">
+              <view class="product-detail">
+                <view class="product-name">{{ item.productInfo.name }}</view>
+                <view class="product-options">
+                  <view class="price">{{ item.productInfo.price }}</view>
+                  <view class="product-stepper">
+                    <van-stepper value="{{ item.number }}" data-id="{{item.id}}" bind:change="onNumberChange" integer />
+                  </view>
+                </view>
+              </view>
+            </van-col>
+          </van-row>
+        </view>
+      </block>
+    </van-checkbox-group>
+  </view>
+  <!-- 透明view，占用下拉空间 -->
+  <view class='placeholder-view'></view>
+  <!-- 购物车操作栏 -->
+  <view class="bottom-bar">
+    <van-row>
+      <van-col span="6">
+        <view class="allCheck">
+          <van-checkbox checked-color="#ADD8E6" value="{{ allCheck }}" bind:change="onAllCheckChange">全选</van-checkbox>
+        </view>
+      </van-col>
+      <van-col span="18">
+        <block wx:if="{{ pay }}">
+        <view class="sum-money">原价:{{ totalPrice }}</view>
+          <view class="payment-fee">合计:
+            <text>{{ paymentFee }}</text>
+          </view>
+          <view class="pay-button" bindtap="onClickPay">结算</view>
+        </block>
+        <block wx:if="{{ !pay }}">
+          <view class="clear-button" bindtap="onClickClear">清空</view>
+          <view class="delete-button" bindtap="onClickDelete">删除</view>
+        </block>
+      </van-col>
+    </van-row>
+  </view>
+  <!-- 确认弹窗 -->
+  <van-dialog id="van-dialog" />
+  <!-- 警示弹窗 -->
+  <van-toast id="van-toast" />
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search",
+    "water-fall": "../../components/WaterFallComponent/WaterFallComponent"
+  }
+}

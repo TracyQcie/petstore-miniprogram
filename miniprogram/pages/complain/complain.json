@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-panel": "@vant/weapp/panel",
+    "van-divider": "@vant/weapp/divider"
+  },
+  "navigationBarTitleText": "申诉记录"
+}

@@ -1,0 +1,31 @@
+<view class="points">
+  <!-- 积分按钮说明 -->
+  <van-panel title="积分同步" desc="点击按钮将微信步数转为积分">
+    <view class="potins-sync-button">
+      <van-button icon="replay" size="large" color="linear-gradient(to right, #add8e6, #f67879)" bind:click="onSyncButtonClick">同步积分</van-button>
+    </view>
+  </van-panel>
+  <!-- 用户积分增长详情 -->
+  <view class="user-points-details">
+    <block wx:if="{{sync}}">
+      <van-panel title="同步结果" desc="1微信步数 = 0.1积分">
+        <view class="points-details">
+          <view>本次同步积分为
+            <text>{{addPointNum}}</text>
+          </view>
+          <view>您现在的积分为
+            <text>{{points}}</text> </view>
+        </view>
+      </van-panel>
+    </block>
+    <block wx:for="{{weRunToPointData}}" wx:key="time">
+      <!-- 如果某条记录没有增加积分，隐藏积分字段的显示 -->
+      <view wx:if="{{item.changeUserPoints > 0}}">
+        <van-panel title="变动积分" desc="{{item.time}}" status="+{{item.changeUserPoints}}">
+        </van-panel>
+      </view>
+      <!-- 其他字段的显示代码请查阅专栏源代码 -->
+    </block>
+  </view>
+  <view class="points-detail-background" style="background: url({{backgroundUrl}}) no-repeat  top/cover"></view>
+</view>

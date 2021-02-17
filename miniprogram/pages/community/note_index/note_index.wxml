@@ -1,0 +1,30 @@
+<view class="node-index">
+  <view class="nav-bar">
+    <view class="{{ 0 == activeIndex?'nav-bar-btn-active':'nav-bar-btn'}}" data-id="0" bindtap="navBarTabClick">发现</view>
+    <view class="{{ 1 == activeIndex?'nav-bar-btn-active':'nav-bar-btn'}}" data-id="1" bindtap="navBarTabClick">收藏</view>
+    <view class="{{ 2 == activeIndex?'nav-bar-btn-active':'nav-bar-btn'}}" data-id="2" bindtap="navBarTabClick">我的</view>
+    <view class="nav-bar-btn-icon">
+      <navigator url="../note_upload/note_upload">
+        <van-icon class="nav-bar-icon" name="records" />
+      </navigator>
+    </view>
+  </view>
+  <block wx:for="{{noteArray}}" wx:key="index">
+    <view class="note-card">
+      <navigator url="../note_detail/note_detail?index={{ item.index }}">
+        <view class="note-card-img">
+          <image src="{{ item.img }}" style='width:100%;height:100px;' mode="center" lazy-load="true"></image>
+        </view>
+        <view class="note-card-content">{{ item.content }}</view>
+      </navigator>
+      <view class="note-card-footer">
+        <view class="date">{{ item.date }}</view>
+        <view class="like">{{ item.upvoteNum }}
+          <view class="like-icon">
+            <van-icon name="like-o" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

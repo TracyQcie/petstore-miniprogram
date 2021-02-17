@@ -1,0 +1,152 @@
+/* miniprogram/pages/cart/cart.wxss */
+
+.cart {
+  color: #323233;
+}
+
+.placeholder-view {
+  width: 100%;
+  height: 100rpx;
+}
+
+.cart-situation {
+  padding: 14rpx 30rpx;
+  height: 60rpx;
+}
+
+.total {
+  display: inline-block;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+
+.manage {
+  float: right;
+  color: #f67879;
+  border: 1rpx solid #f67879;
+  padding: 10rpx 20rpx;
+  border-radius: 30rpx;
+}
+
+.discount {
+  display: inline-block;
+  font-size: 25rpx;
+  color: gray;
+}
+
+.product-list {
+  z-index: -1;
+}
+
+.bottom-bar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  height: 100rpx;
+  border: 1rpx solid rgba(128, 128, 128, 0.13);
+  background-color: #fff;
+}
+
+.check {
+  margin-top: 40rpx;
+  margin-left: 25rpx;
+}
+
+.product-container {
+  padding: 10rpx;
+  border: 1rpx solid rgba(128, 128, 128, 0.13);
+}
+
+.product-name {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-all;
+  margin: 0 16rpx;
+}
+
+.thumbnail {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  border: 1rpx solid pink;
+}
+
+.product-detail {
+  position: relative;
+  height: 160rpx;
+}
+
+.product-options {
+  position: absolute;
+  bottom: 0;
+}
+
+.price {
+  display: inline-block;
+  font-size: 27rpx;
+  color: red;
+  width: 250rpx;
+  margin-left: 15rpx;
+}
+
+.product-stepper {
+  float: right;
+  margin-left: 5px;
+}
+
+.allCheck {
+  margin-left: 20rpx;
+  margin-top: 28rpx;
+}
+
+.payment-fee {
+  display: inline-block;
+  margin-top: 25rpx;
+  margin-left: 15rpx;
+  font-size: 35rpx;
+}
+
+.sum-money {
+  display: inline-block;
+  font-size: 25rpx;
+  color: gray;
+  text-decoration: line-through;
+}
+
+.pay-button {
+  float: right;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+  font-size: 34rpx;
+  border: 1rpx solid rgba(33, 114, 221, 0.842);
+  padding: 10rpx 20rpx;
+  color: rgba(33, 114, 221, 0.842);
+  border-radius: 30rpx;
+}
+
+.delete-button {
+  float: right;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+  font-size: 34rpx;
+  border: 1rpx solid rgba(253, 28, 28, 0.966);
+  padding: 10rpx 20rpx;
+  color: rgba(253, 28, 28, 0.966);
+  border-radius: 30rpx;
+}
+
+.clear-button {
+  float: right;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+  font-size: 34rpx;
+  border: 1rpx solid rgba(253, 138, 7, 0.966);
+  padding: 10rpx 20rpx;
+  color: rgba(253, 138, 7, 0.966);
+  border-radius: 30rpx;
+}

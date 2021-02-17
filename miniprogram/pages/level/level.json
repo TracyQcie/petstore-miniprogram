@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-circle": "@vant/weapp/circle",
+    "van-icon": "@vant/weapp/icon",
+    "van-row": "@vant/weapp/row",
+    "van-col": "@vant/weapp/col",
+    "van-divider": "@vant/weapp/divider"
+  }
+}

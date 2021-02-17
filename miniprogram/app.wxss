@@ -1,0 +1,4 @@
+/**app.wxss**/
+/* @import 'style/weui.wxss'; */
+@import "./style/petstore-icon.wxss";
+@import "./style/iconfont-weapp/icon/icon.wxss";

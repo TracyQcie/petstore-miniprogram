@@ -1,0 +1,47 @@
+#left image, #right image {
+  width: 100%;
+}
+
+/* 左边一列的样式 */
+
+.fall-left {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  float: left;
+}
+
+/* 右边一列的样式 */
+
+.fall-right {
+  margin-right: 20rpx;
+  float: left;
+}
+
+.cards {
+  margin-top: 20rpx;
+  background: #fff;
+  box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.10);
+  border-radius: 14rpx;
+  break-inside: avoid;
+  padding-bottom: 20rpx;
+  overflow: auto;
+}
+
+.cards .text {
+  display: inline-block;
+  font-size: 12px;
+  padding: 0 20rpx;
+  width: 100%;
+}
+
+.cards .text .name {
+  font-weight: 600;
+  color: #353535;
+  width: 94%;
+}
+
+.cards .text .price {
+  padding-top: 20rpx;
+  font-weight: 600;
+  color: #e64340;
+}

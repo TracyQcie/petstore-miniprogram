@@ -1,0 +1,104 @@
+/* miniprogram/pages/user/user.wxss */
+
+/* page{
+  background-color: #ffffff;
+} */
+
+.user {
+  height: 100%;
+}
+
+.user-profile {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  height: 500rpx;
+  z-index: -1;
+}
+
+.user-profile-container {
+  width: 100%;
+  height: 500rpx;
+  filter: blur(40rpx);
+  opacity: 0.8;
+}
+
+.user-profile-mask {
+  position: absolute;
+  width: 100%;
+  height: 500rpx;
+  background-color: #646363b6;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.user-icon {
+  margin-top: -60%;
+  width: 150rpx;
+  height: 150rpx;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 60rpx);
+}
+
+.user-name {
+  margin-top: -60%;
+  font-size: 36rpx;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 240rpx);
+}
+
+.divide {
+  width: 1rpx;
+  height: 70rpx;
+  background-color: rgb(202, 202, 202);
+  display: inline-block;
+  margin: 10rpx 30rpx;
+}
+
+.user-block {
+  margin-top: -10%;
+  width: 100%;
+  height: 400rpx;
+  background-color: #fff;
+  border-radius: 40rpx 40rpx 0;
+  display: inline-block;
+}
+
+.user-detail {
+  margin-top: 5%;
+  text-align: center;
+}
+
+.user-points {
+  display: inline-block;
+  margin-right: 20rpx;
+}
+
+.user-level {
+  display: inline-block;
+  margin-left: 20rpx;
+}
+
+.user-detail-text {
+  font-size: 30px;
+  color: gold;
+}
+
+.user-detail-describe {
+  font-size: 25rpx;
+  color: grey;
+}
+
+.user-options {
+  margin-top: 50rpx;
+  width: 100%;
+  text-align: center;
+}

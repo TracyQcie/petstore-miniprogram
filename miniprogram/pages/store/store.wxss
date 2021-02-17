@@ -1,0 +1,57 @@
+.store {
+  margin-top: 10rpx;
+}
+
+.t-icon {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.page-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.searchbar {
+  font-size: 30rpx;
+  height: 60rpx;
+  margin: 20rpx;
+}
+
+.page-section-spacing {
+  margin-top: 50rpx;
+  box-sizing: border-box;
+  padding: 0 50rpx;
+}
+
+.swiper-item {
+  width: 100%;
+  border-radius: 25rpx;
+}
+
+.swiper-img {
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.category-list {
+  text-align: center;
+  margin-top: 30rpx;
+}
+
+.category-icon {
+  display: inline-block;
+  margin: 10rpx 20rpx;
+  color: grey;
+}
+
+.products image {
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+}

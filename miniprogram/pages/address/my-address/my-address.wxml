@@ -1,0 +1,47 @@
+<!--miniprogram/pages/address/my-address/my-address.wxml-->
+<view class="my-address">
+  <!-- 跳转添加页面 -->
+  <van-cell is-link title="添加新地址" link-type="navigateTo" url="../edit-address/edit-address" />
+  <!-- 默认地址在第一项 -->
+  <view class="address-container">
+    <van-row>
+      <van-col span="20">
+        <view class="address-content"  data-id="{{defaultAddress.addressId}}" bind:tap="onAddressContantClick">
+          <view class="receiver">{{defaultAddress.receiver}}</view>
+          <view class="phone">{{defaultAddress.phone}}</view>
+          <view class="adress-detail">
+            <van-tag color="#f67879" plain>默认</van-tag>
+            {{defaultAddress.region[0].name}} {{defaultAddress.region[1].name}} {{defaultAddress.region[2].name}} {{defaultAddress.address}}</view>
+        </view>
+      </van-col>
+      <van-col span="4">
+        <view class="address-operation">
+          <van-icon class="edit-button" name="edit" data-id="{{defaultAddress.addressId}}" bind:tap="onEditButtonClick" />
+        </view>
+      </van-col>
+    </van-row>
+  </view>
+  <!-- 遍历剩下已有地址列表 -->
+  <view class="address-list">
+    <block wx:for="{{ userAddressList }}" wx:key="index">
+      <block wx:if="{{item.default == false}}">
+        <view class="address-container" >
+          <van-row>
+            <van-col span="20">
+              <view class="address-content" data-id="{{item.addressId}}" bind:tap="onAddressContantClick">
+                <view class="receiver">{{item.receiver}}</view>
+                <view class="phone">{{item.phone}}</view>
+                <view class="adress-detail">{{item.region[0].name}} {{item.region[1].name}} {{item.region[2].name}} {{item.address}}</view>
+              </view>
+            </van-col>
+            <van-col span="4">
+              <view class="address-operation" data-id="{{item.addressId}}" bind:tap="onEditButtonClick">
+                <van-icon class="edit-button" name="edit" />
+              </view>
+            </van-col>
+          </van-row>
+        </view>
+      </block>
+    </block>
+  </view>
+</view>
